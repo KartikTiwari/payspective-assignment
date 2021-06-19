@@ -1,0 +1,30 @@
+.satisfaction-bar, .pay-bar {
+  display: flex;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    img {
+      width: 15px;
+      height: 15px;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.satisfaction-bar {
+  border-bottom: 5px solid #00d7a8;
+}
+
+.pay-bar {
+  border-bottom: 5px solid #4981f7;
+}

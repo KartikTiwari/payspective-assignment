@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "payspective"
+  "defaultProject": "payspective",
+  "cli": {
+    "analytics": false
+  }
 }
