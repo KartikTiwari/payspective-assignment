@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <h4>ID</h4>
+    </div>
+    <div class="col-2">
+      <h4>Name</h4>
+    </div>
+    <div class="col-2 col-md-1">
+      <h4>Age</h4>
+    </div>
+    <div class="col-2">
+      <h4>Email</h4>
+    </div>
+    <div class="col-3 col-md-4">
+      <h4>Bio</h4>
+    </div>
+  </div>
+  <div *ngFor="let data of tableData" class="row">
+    <div class="col-3">
+      <p>{{data.id}}</p>
+    </div>
+    <div class="col-2">
+      <p>{{data.name}}</p>
+    </div>
+    <div class="col-2 col-md-1">
+      <p>{{data.age}}</p>
+    </div>
+    <div class="col-2">
+      <p>{{data.email}}</p>
+    </div>
+    <div class="col-3 col-md-4">
+      <p>{{data.bio}}</p>
+    </div>
+  </div>
+</div>

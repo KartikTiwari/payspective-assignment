@@ -10,6 +10,9 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { HomeComponent } from './pages/home/home.component';
 import { DropdownsPageComponent } from './pages/dropdowns-page/dropdowns-page.component';
 import { FormComponent } from './pages/form/form.component';
+import {HttpClientModule} from '@angular/common/http';
+import { TableComponent } from './pages/form/table/table.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { FormComponent } from './pages/form/form.component';
     ProgressBarComponent,
     HomeComponent,
     DropdownsPageComponent,
-    FormComponent
+    FormComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

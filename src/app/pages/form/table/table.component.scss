@@ -1,0 +1,35 @@
+.row {
+  padding: 10px;
+
+  &:nth-child(even) {
+    background-color: #f6f6f6;
+  }
+
+  &:hover {
+    background-color: #e7ece9;
+  }
+
+  &:first-child {
+    background-color: white;
+    border-bottom: 1px solid #071348;
+  }
+
+  h4 {
+    font-weight: bold;
+    color: #071348;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    word-break: break-all;
+    margin-bottom: 0;
+    color: #6d6d6d;
+    font-size: 1rem;
+
+    @media screen and (max-width: 767px) {
+      font-size: 0.7rem;
+    }
+  }
+}

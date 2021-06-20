@@ -1,0 +1,94 @@
+<!--<app-table></app-table>-->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" formControlName="name" id="name" type="text">
+              <span
+                *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
+                class="help-block">Please enter a valid name. It must not contain numbers.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input class="form-control" formControlName="email" id="email" type="text">
+              <span
+                *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
+                class="help-block">Please enter a valid email id.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input class="form-control" formControlName="username" id="username" type="text">
+              <span
+                *ngIf="!signUpForm.get('username').valid && signUpForm.get('username').touched"
+                class="help-block">Please enter a valid username.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input (blur)="checkPasswords()" class="form-control" formControlName="password" id="password"
+                     type="password">
+              <span
+                *ngIf="!signUpForm.get('password').valid && signUpForm.get('password').touched"
+                class="help-block">Your password must be between 8 and 15 characters. It must contain at least one alphabet, one numeric digit and one special character.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input (blur)="checkPasswords()" class="form-control" formControlName="confirmPassword" id="confirmPassword"
+                     type="password">
+              <span
+                *ngIf="!confirmPasswordMatch && signUpForm.get('confirmPassword').touched"
+                class="help-block">Passwords do not match. Please try again.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="contact">Contact Number</label>
+              <input class="form-control" formControlName="contact" id="contact" type="text">
+              <span
+                *ngIf="!signUpForm.get('contact').valid && signUpForm.get('contact').touched"
+                class="help-block">Please enter a valid contact number of 10 digits.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input class="form-control" formControlName="address" id="address" type="text">
+              <span
+                *ngIf="!signUpForm.get('address').valid && signUpForm.get('address').touched"
+                class="help-block">Please enter your address</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button [disabled]="!signUpForm.valid || !confirmPasswordMatch" class="btn btn-success" type="submit">Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
