@@ -1,0 +1,36 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .dropdown {
+    background-color: #2b35a8;
+
+    a {
+      color: white;
+    }
+  }
+
+  .form {
+    background-color: #00d7a8;
+
+    a {
+      color: black;
+    }
+  }
+
+  .dropdown, .form {
+    padding: 20px 30px;
+    cursor: pointer;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+
+      @media screen and (max-width: 1000px){
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

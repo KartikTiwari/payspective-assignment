@@ -44,7 +44,7 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.http.post('http://schematic-ipsum.herokuapp.com?n=1', this.signUpForm.value).subscribe((data) => {
+    this.http.post('https://payspective-f676f-default-rtdb.firebaseio.com/', this.signUpForm.value).subscribe((data) => {
       console.log(data);
     }, error => console.log(error));
   }
