@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DropdownsPageComponent } from './dropdowns-page.component';
+import {AppModule} from '../../app.module';
 
 describe('DropdownsPageComponent', () => {
   let component: DropdownsPageComponent;
@@ -8,7 +9,8 @@ describe('DropdownsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DropdownsPageComponent ]
+      declarations: [ DropdownsPageComponent ],
+      imports: [AppModule]
     })
     .compileComponents();
   });
