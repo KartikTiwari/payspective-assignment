@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {DropdownsPageComponent} from './pages/dropdowns-page/dropdowns-page.component';
 import {FormComponent} from './pages/form/form.component';
+import {TableComponent} from './pages/table/table.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'form',
     component: FormComponent
+  },
+  {
+    path: 'table',
+    component: TableComponent
   }
 ];
 

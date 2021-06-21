@@ -3,20 +3,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  max-width: 500px;
 
-  .dropdown {
+  .dropdown, .form {
     background-color: #2b35a8;
 
     a {
       color: white;
-    }
-  }
-
-  .form {
-    background-color: #00d7a8;
-
-    a {
-      color: black;
     }
   }
 

@@ -11,7 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DropdownsPageComponent } from './pages/dropdowns-page/dropdowns-page.component';
 import { FormComponent } from './pages/form/form.component';
 import {HttpClientModule} from '@angular/common/http';
-import { TableComponent } from './pages/form/table/table.component';
+import { TableComponent } from './pages/table/table.component';
 import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({

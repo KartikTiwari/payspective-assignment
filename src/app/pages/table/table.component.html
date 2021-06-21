@@ -1,3 +1,4 @@
+<h1 class="mb-5 text-center main-heading"><span>Table Data</span></h1>
 <div class="container-fluid">
   <div class="row">
     <div class="col-3">
@@ -33,4 +34,7 @@
       <p>{{data.bio}}</p>
     </div>
   </div>
+</div>
+<div *ngIf="showloader" class="loader" style="background-color: white">
+  <img src="../assets/images/loading-new.gif" alt="loader">
 </div>

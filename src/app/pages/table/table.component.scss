@@ -1,3 +1,14 @@
+.main-heading span {
+  color: #071348;
+  border-bottom: 8px solid #071348;
+  padding-bottom: 5px;
+  font-size: 2rem;
+
+  @media screen and (max-width: 767px){
+    font-size: 1.5rem
+  }
+}
+
 .row {
   padding: 10px;
 
@@ -32,4 +43,11 @@
       font-size: 0.7rem;
     }
   }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
