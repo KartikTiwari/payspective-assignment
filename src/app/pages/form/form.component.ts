@@ -14,6 +14,9 @@ export class FormComponent implements OnInit {
   passwordPattern = '(^(?=.*?[a-zA-Z])(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{8,15}$)';
   onlyNumbersPattern = '^[0-9]*$';
   confirmPasswordMatch = false;
+  showSuccessMessage = false;
+  showErrorMessage = false;
+  showLoader = false;
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -44,9 +47,17 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.http.post('https://payspective-f676f-default-rtdb.firebaseio.com/', this.signUpForm.value).subscribe((data) => {
-      console.log(data);
-    }, error => console.log(error));
+    this.showLoader = true;
+    this.http.post('https://my-web-app-8c7c3-default-rtdb.firebaseio.com/users.json', this.signUpForm.value).subscribe((data) => {
+      this.signUpForm.reset();
+      this.showErrorMessage = false;
+      this.showSuccessMessage = true;
+      this.showLoader = false;
+    }, (error) => {
+      this.showSuccessMessage = false;
+      this.showErrorMessage = true;
+      this.showLoader = false;
+    });
   }
 
   checkPasswords(): void {

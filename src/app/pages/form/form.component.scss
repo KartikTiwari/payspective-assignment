@@ -16,3 +16,20 @@ span {
 label {
   color: #071348;
 }
+
+.messages {
+  max-width: 600px;
+  margin: 0 auto;
+
+  p {
+    padding: 20px 0;
+    font-size: 1.2rem;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
